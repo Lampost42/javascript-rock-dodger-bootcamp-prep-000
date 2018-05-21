@@ -73,7 +73,7 @@ function createRock(x) {
       if (checkCollision(rock) === true){
         endGame();
       } else if(rockTop < 400) {
-        console.log("step");
+        console.log(rock.style.top);
         rock.style.top += `${rockTop+2}px`;
       } else {
         rock.parentNode.removeChild(rock)
