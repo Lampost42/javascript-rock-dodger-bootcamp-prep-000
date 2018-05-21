@@ -74,7 +74,7 @@ function createRock(x) {
         endGame();
       } else if(rockTop < 400) {
         console.log(rock.style.top);
-        rock.style.top += `${rockTop+2}px`;
+        rock.style.top = `${rockTop+2}px`;
         console.log(rock.style.top);
       } else {
         rock.parentNode.removeChild(rock)
