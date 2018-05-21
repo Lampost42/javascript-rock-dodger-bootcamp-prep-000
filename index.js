@@ -71,7 +71,7 @@ function createRock(x) {
     function step(){
       var rockTop = positionToInteger(rock.style.top);
       if (checkCollision(rock) === true){
-        endGame();
+        endGame(ROCKS);
       } else if(rockTop < 400) {
         rock.style.top = `${rockTop+2}px`;
         window.requestAnimationFrame(step);
@@ -91,7 +91,10 @@ function createRock(x) {
  * and removing the `moveDodger` event listener.
  * Finally, alert "YOU LOSE!" to the player.
  */
-function endGame() {
+function endGame(Rocks) {
+  clearInterval(myInterval);
+  Rocks.parentNode.removeChild(Rocks);
+  
 }
 
 function moveDodger(e) {
