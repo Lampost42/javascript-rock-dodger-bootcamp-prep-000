@@ -92,7 +92,7 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame(Rocks) {
-  clearInterval(myInterval);
+  clearInterval(gameInterval);
   Rocks.parentNode.removeChild(Rocks);
   
 }
