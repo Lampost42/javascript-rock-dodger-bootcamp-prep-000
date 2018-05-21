@@ -79,7 +79,7 @@ function createRock(x) {
       var x = positionToInteger(rock.style.top);
       rock.style.top += `${x+2}px`;
     } else {
-      rock.parentNode.
+      rock.parentNode.removeChild
     }
     /**
      * Otherwise, if the rock hasn't reached the bottom of
