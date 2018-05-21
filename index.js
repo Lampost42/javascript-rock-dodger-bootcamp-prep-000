@@ -94,6 +94,7 @@ function endGame(Rocks) {
   clearInterval(gameInterval);
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
+  ROCKS.remove();
 }
 
 function moveDodger(e) {
