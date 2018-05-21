@@ -75,7 +75,7 @@ function createRock(x) {
      */
     if (checkCollision(rock) === true){
       endGame();
-    } else if(rock.style.top < 400) {
+    } else if(rock.style.top > 400) {
       var x = positionToInteger(rock.style.top);
       rock.style.top += `${x+2}px`;
     } 
