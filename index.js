@@ -75,7 +75,7 @@ function createRock(x) {
         rock.style.top = `${rockTop+2}px`;
         window.requestAnimationFrame(step);
       } else {
-        rock.parentNode.removeChild(rock)
+        rock.remove();
       }
     }
     window.requestAnimationFrame(step);
@@ -94,7 +94,7 @@ function endGame(Rocks) {
   clearInterval(gameInterval);
   for( var i = 0; i < Rocks.length; i++){
     console.log(Rocks[i]);
-    Rocks[i].parentNode.removeChild('div');
+    Rocks[i].remove();
   }
   
 }
