@@ -78,9 +78,7 @@ function createRock(x) {
     } else if(rock.style.top < 400) {
       var x = positionToInteger(rock.style.top);
       rock.style.top += `${x+2}px`;
-    } else {
-      rock.parentNode.removeChild(rock)
-    }
+    } else 
     /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
