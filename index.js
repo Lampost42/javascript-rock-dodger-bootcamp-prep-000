@@ -69,11 +69,11 @@ function createRock(x) {
   function moveRock(rock) {
     console.log("move");
     function step(){
-      console.log("step");
       var rockTop = positionToInteger(rock.style.top);
       if (checkCollision(rock) === true){
         endGame();
       } else if(rockTop < 400) {
+        console.log("step");
         rock.style.top += `${rockTop+2}px`;
         window.requestAnimationFrame(step);
       } else {
