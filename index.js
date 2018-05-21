@@ -98,8 +98,6 @@ function endGame(Rocks) {
   }
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
-  
-  
 }
 
 function moveDodger(e) {
