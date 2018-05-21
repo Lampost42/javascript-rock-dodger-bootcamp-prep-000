@@ -101,25 +101,21 @@ function endGame(Rocks) {
 }
 
 function moveDodger(e) {
-  // implement me!
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
+  if (e.which === 37){
+    moveDodgerLeft(DODGER);
+  } else if(e.which === 39){
+    moveDodgerRight(DODGER);
+  }
 }
 
-function moveDodgerLeft() {
-  // implement me!
-  /**
-   * This function should move DODGER to the left
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
+function moveDodgerLeft(dodger) {
+  var pos = positionToInteger(dodger.style.left);
+  if (pos > 0){
+    dodger.style.left = `${pos - 4}px`
+  }
 }
 
-function moveDodgerRight() {
+function moveDodgerRight(dodger) {
   // implement me!
   /**
    * This function should move DODGER to the right
