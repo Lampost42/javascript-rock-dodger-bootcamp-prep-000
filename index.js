@@ -97,6 +97,7 @@ function endGame(Rocks) {
     Rocks[i].remove();
   }
   
+  
 }
 
 function moveDodger(e) {
