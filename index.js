@@ -93,7 +93,7 @@ function createRock(x) {
  */
 function endGame(Rocks) {
   clearInterval(gameInterval);
-  for() var i = 0; i < Rocks.length; i++){
+  for( var i = 0; i < Rocks.length; i++){
     Rocks[i].parentNode.removeChild(Rocks[i]);
   }
   
