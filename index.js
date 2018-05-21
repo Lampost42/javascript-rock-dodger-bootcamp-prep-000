@@ -109,10 +109,14 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft(dodger) {
-  var pos = positionToInteger(dodger.style.left);
-  if (pos > 0){
-    dodger.style.left = `${pos - 4}px`
+  
+  function step(){
+    var pos = positionToInteger(dodger.style.left);
+    if (pos > 0){
+      dodger.style.left = `${pos - 4}px`
+    }
   }
+  window.requestAnimationFrame(step);
 }
 
 function moveDodgerRight(dodger) {
